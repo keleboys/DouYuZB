@@ -8,12 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		374F35FD26CB9C1600726D5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F35FC26CB9C1600726D5D /* AppDelegate.swift */; };
-		374F360126CB9C1600726D5D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F360026CB9C1600726D5D /* ViewController.swift */; };
 		374F360426CB9C1600726D5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 374F360226CB9C1600726D5D /* Main.storyboard */; };
 		374F360626CB9C1D00726D5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 374F360526CB9C1D00726D5D /* Assets.xcassets */; };
 		374F361426CB9C1E00726D5D /* DouYuZBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F361326CB9C1E00726D5D /* DouYuZBTests.swift */; };
 		374F361F26CB9C1E00726D5D /* DouYuZBUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F361E26CB9C1E00726D5D /* DouYuZBUITests.swift */; };
-		374F36CE26CCB0BF00726D5D /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F36CD26CCB0BF00726D5D /* R.generated.swift */; };
+		374F36E026CCB4DB00726D5D /* ZQBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F36DF26CCB4DB00726D5D /* ZQBaseViewController.swift */; };
+		374F36E826CCB4F800726D5D /* ZQHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F36E726CCB4F800726D5D /* ZQHomeViewController.swift */; };
+		374F36ED26CCB50400726D5D /* ZQLiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F36EC26CCB50400726D5D /* ZQLiveViewController.swift */; };
+		374F36F226CCB51800726D5D /* ZQFollowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F36F126CCB51800726D5D /* ZQFollowViewController.swift */; };
+		374F36F726CCB52A00726D5D /* ZQProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F36F626CCB52A00726D5D /* ZQProfileViewController.swift */; };
+		374F36FC26CCB54600726D5D /* ZQMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F36FB26CCB54600726D5D /* ZQMainViewController.swift */; };
+		374F370126CCB64F00726D5D /* ZQNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F370026CCB64F00726D5D /* ZQNavigationController.swift */; };
+		374F373326CCBC8900726D5D /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F373226CCBC8900726D5D /* R.generated.swift */; };
+		374F373926CCDC1B00726D5D /* UIBarButtonItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F373826CCDC1B00726D5D /* UIBarButtonItem-Extension.swift */; };
+		374F373E26CCEA6A00726D5D /* ZQPageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F373D26CCEA6A00726D5D /* ZQPageTitleView.swift */; };
+		374F374326CCED9F00726D5D /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F374226CCED9F00726D5D /* Common.swift */; };
+		374F374826CCEE8E00726D5D /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F374726CCEE8E00726D5D /* UIColor-Extension.swift */; };
+		374F375326CCF53A00726D5D /* ZQPageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F375226CCF53A00726D5D /* ZQPageContentView.swift */; };
+		374F377926CCF7E900726D5D /* ZQRecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F377626CCF7E900726D5D /* ZQRecommendViewController.swift */; };
+		374F377E26CCF7FA00726D5D /* ZQGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F377D26CCF7FA00726D5D /* ZQGameViewController.swift */; };
+		374F378326CCF80900726D5D /* ZQFunnyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F378226CCF80900726D5D /* ZQFunnyViewController.swift */; };
+		374F378826CCF81500726D5D /* ZQAmuseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F378726CCF81500726D5D /* ZQAmuseViewController.swift */; };
 		477A0F59C483CCDC384EF6C0 /* Pods_DouYuZB_DouYuZBUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC10A5DDFE6C7C5221414A51 /* Pods_DouYuZB_DouYuZBUITests.framework */; };
 		59EF45BD4A7EA021AAADAACF /* Pods_DouYuZB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A69A928FB856A3CF019B133A /* Pods_DouYuZB.framework */; };
 		EAF42F29EC9C695A9DB91264 /* Pods_DouYuZBTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B113F287F073052F739174AD /* Pods_DouYuZBTests.framework */; };
@@ -41,7 +56,6 @@
 		1E7E51911DF4742E1D59828A /* Pods-DouYuZB-DouYuZBUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouYuZB-DouYuZBUITests.release.xcconfig"; path = "Target Support Files/Pods-DouYuZB-DouYuZBUITests/Pods-DouYuZB-DouYuZBUITests.release.xcconfig"; sourceTree = "<group>"; };
 		374F35F926CB9C1600726D5D /* DouYuZB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DouYuZB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		374F35FC26CB9C1600726D5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		374F360026CB9C1600726D5D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		374F360326CB9C1600726D5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		374F360526CB9C1D00726D5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		374F360A26CB9C1D00726D5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,7 +65,23 @@
 		374F361A26CB9C1E00726D5D /* DouYuZBUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DouYuZBUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		374F361E26CB9C1E00726D5D /* DouYuZBUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DouYuZBUITests.swift; sourceTree = "<group>"; };
 		374F362026CB9C1E00726D5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		374F36CD26CCB0BF00726D5D /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		374F36DF26CCB4DB00726D5D /* ZQBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZQBaseViewController.swift; sourceTree = "<group>"; };
+		374F36E726CCB4F800726D5D /* ZQHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZQHomeViewController.swift; sourceTree = "<group>"; };
+		374F36EC26CCB50400726D5D /* ZQLiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZQLiveViewController.swift; sourceTree = "<group>"; };
+		374F36F126CCB51800726D5D /* ZQFollowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZQFollowViewController.swift; sourceTree = "<group>"; };
+		374F36F626CCB52A00726D5D /* ZQProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZQProfileViewController.swift; sourceTree = "<group>"; };
+		374F36FB26CCB54600726D5D /* ZQMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZQMainViewController.swift; sourceTree = "<group>"; };
+		374F370026CCB64F00726D5D /* ZQNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZQNavigationController.swift; sourceTree = "<group>"; };
+		374F373226CCBC8900726D5D /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		374F373826CCDC1B00726D5D /* UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-Extension.swift"; sourceTree = "<group>"; };
+		374F373D26CCEA6A00726D5D /* ZQPageTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZQPageTitleView.swift; sourceTree = "<group>"; };
+		374F374226CCED9F00726D5D /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		374F374726CCEE8E00726D5D /* UIColor-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
+		374F375226CCF53A00726D5D /* ZQPageContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZQPageContentView.swift; sourceTree = "<group>"; };
+		374F377626CCF7E900726D5D /* ZQRecommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZQRecommendViewController.swift; sourceTree = "<group>"; };
+		374F377D26CCF7FA00726D5D /* ZQGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZQGameViewController.swift; sourceTree = "<group>"; };
+		374F378226CCF80900726D5D /* ZQFunnyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZQFunnyViewController.swift; sourceTree = "<group>"; };
+		374F378726CCF81500726D5D /* ZQAmuseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZQAmuseViewController.swift; sourceTree = "<group>"; };
 		6D7A382CE0BEB9E5910E5983 /* Pods-DouYuZB-DouYuZBUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouYuZB-DouYuZBUITests.debug.xcconfig"; path = "Target Support Files/Pods-DouYuZB-DouYuZBUITests/Pods-DouYuZB-DouYuZBUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		81984484899F92C754B02181 /* Pods-DouYuZB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouYuZB.debug.xcconfig"; path = "Target Support Files/Pods-DouYuZB/Pods-DouYuZB.debug.xcconfig"; sourceTree = "<group>"; };
 		9EA72B966A61B10796F9DE0B /* Pods-DouYuZB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouYuZB.release.xcconfig"; path = "Target Support Files/Pods-DouYuZB/Pods-DouYuZB.release.xcconfig"; sourceTree = "<group>"; };
@@ -115,9 +145,8 @@
 			isa = PBXGroup;
 			children = (
 				374F36A226CCAE9F00726D5D /* Calsses */,
-				374F35FC26CB9C1600726D5D /* AppDelegate.swift */,
-				374F360026CB9C1600726D5D /* ViewController.swift */,
 				374F36C926CCB04600726D5D /* Resources */,
+				374F35FC26CB9C1600726D5D /* AppDelegate.swift */,
 				374F360226CB9C1600726D5D /* Main.storyboard */,
 				374F360A26CB9C1D00726D5D /* Info.plist */,
 			);
@@ -159,10 +188,12 @@
 		374F36A626CCAFD000726D5D /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				374F373726CCDBD600726D5D /* Extension */,
 				374F36A726CCAFD000726D5D /* ViewModel */,
 				374F36A826CCAFD000726D5D /* Controller */,
 				374F36A926CCAFD000726D5D /* Model */,
 				374F36AA26CCAFD000726D5D /* View */,
+				374F374226CCED9F00726D5D /* Common.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -216,6 +247,9 @@
 		374F36AD26CCAFD000726D5D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				374F36FB26CCB54600726D5D /* ZQMainViewController.swift */,
+				374F370026CCB64F00726D5D /* ZQNavigationController.swift */,
+				374F36DF26CCB4DB00726D5D /* ZQBaseViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -230,6 +264,8 @@
 		374F36AF26CCAFD000726D5D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				374F373D26CCEA6A00726D5D /* ZQPageTitleView.swift */,
+				374F375226CCF53A00726D5D /* ZQPageContentView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -294,6 +330,7 @@
 		374F36B726CCAFD000726D5D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				374F36EC26CCB50400726D5D /* ZQLiveViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -333,6 +370,7 @@
 		374F36BC26CCAFD000726D5D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				374F36F626CCB52A00726D5D /* ZQProfileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -372,6 +410,7 @@
 		374F36C126CCAFD100726D5D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				374F36F126CCB51800726D5D /* ZQFollowViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -393,6 +432,7 @@
 		374F36C426CCAFD100726D5D /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				374F375726CCF6EB00726D5D /* Submodule */,
 				374F36C526CCAFD100726D5D /* ViewModel */,
 				374F36C626CCAFD100726D5D /* Controller */,
 				374F36C726CCAFD100726D5D /* Model */,
@@ -411,6 +451,7 @@
 		374F36C626CCAFD100726D5D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				374F36E726CCB4F800726D5D /* ZQHomeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -432,10 +473,190 @@
 		374F36C926CCB04600726D5D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				374F36CD26CCB0BF00726D5D /* R.generated.swift */,
+				374F373226CCBC8900726D5D /* R.generated.swift */,
 				374F360526CB9C1D00726D5D /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		374F373726CCDBD600726D5D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				374F373826CCDC1B00726D5D /* UIBarButtonItem-Extension.swift */,
+				374F374726CCEE8E00726D5D /* UIColor-Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		374F375726CCF6EB00726D5D /* Submodule */ = {
+			isa = PBXGroup;
+			children = (
+				374F376E26CCF7E900726D5D /* Amuse */,
+				374F376426CCF7E900726D5D /* Funny */,
+				374F376926CCF7E900726D5D /* Game */,
+				374F377326CCF7E900726D5D /* Recommend */,
+			);
+			path = Submodule;
+			sourceTree = "<group>";
+		};
+		374F376426CCF7E900726D5D /* Funny */ = {
+			isa = PBXGroup;
+			children = (
+				374F376526CCF7E900726D5D /* ViewModel */,
+				374F376626CCF7E900726D5D /* Controller */,
+				374F376726CCF7E900726D5D /* Model */,
+				374F376826CCF7E900726D5D /* View */,
+			);
+			path = Funny;
+			sourceTree = "<group>";
+		};
+		374F376526CCF7E900726D5D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		374F376626CCF7E900726D5D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				374F378226CCF80900726D5D /* ZQFunnyViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		374F376726CCF7E900726D5D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		374F376826CCF7E900726D5D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		374F376926CCF7E900726D5D /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				374F376A26CCF7E900726D5D /* ViewModel */,
+				374F376B26CCF7E900726D5D /* Controller */,
+				374F376C26CCF7E900726D5D /* Model */,
+				374F376D26CCF7E900726D5D /* View */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		374F376A26CCF7E900726D5D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		374F376B26CCF7E900726D5D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				374F377D26CCF7FA00726D5D /* ZQGameViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		374F376C26CCF7E900726D5D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		374F376D26CCF7E900726D5D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		374F376E26CCF7E900726D5D /* Amuse */ = {
+			isa = PBXGroup;
+			children = (
+				374F376F26CCF7E900726D5D /* ViewModel */,
+				374F377026CCF7E900726D5D /* Controller */,
+				374F377126CCF7E900726D5D /* Model */,
+				374F377226CCF7E900726D5D /* View */,
+			);
+			path = Amuse;
+			sourceTree = "<group>";
+		};
+		374F376F26CCF7E900726D5D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		374F377026CCF7E900726D5D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				374F378726CCF81500726D5D /* ZQAmuseViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		374F377126CCF7E900726D5D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		374F377226CCF7E900726D5D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		374F377326CCF7E900726D5D /* Recommend */ = {
+			isa = PBXGroup;
+			children = (
+				374F377426CCF7E900726D5D /* ViewModel */,
+				374F377526CCF7E900726D5D /* Controller */,
+				374F377726CCF7E900726D5D /* Model */,
+				374F377826CCF7E900726D5D /* View */,
+			);
+			path = Recommend;
+			sourceTree = "<group>";
+		};
+		374F377426CCF7E900726D5D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		374F377526CCF7E900726D5D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				374F377626CCF7E900726D5D /* ZQRecommendViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		374F377726CCF7E900726D5D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		374F377826CCF7E900726D5D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		39B9FB373E928EA584980A81 /* Pods */ = {
@@ -719,9 +940,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				374F360126CB9C1600726D5D /* ViewController.swift in Sources */,
+				374F373926CCDC1B00726D5D /* UIBarButtonItem-Extension.swift in Sources */,
+				374F378826CCF81500726D5D /* ZQAmuseViewController.swift in Sources */,
+				374F370126CCB64F00726D5D /* ZQNavigationController.swift in Sources */,
+				374F36FC26CCB54600726D5D /* ZQMainViewController.swift in Sources */,
+				374F373326CCBC8900726D5D /* R.generated.swift in Sources */,
+				374F375326CCF53A00726D5D /* ZQPageContentView.swift in Sources */,
+				374F377926CCF7E900726D5D /* ZQRecommendViewController.swift in Sources */,
+				374F374326CCED9F00726D5D /* Common.swift in Sources */,
 				374F35FD26CB9C1600726D5D /* AppDelegate.swift in Sources */,
-				374F36CE26CCB0BF00726D5D /* R.generated.swift in Sources */,
+				374F36E026CCB4DB00726D5D /* ZQBaseViewController.swift in Sources */,
+				374F377E26CCF7FA00726D5D /* ZQGameViewController.swift in Sources */,
+				374F378326CCF80900726D5D /* ZQFunnyViewController.swift in Sources */,
+				374F36F726CCB52A00726D5D /* ZQProfileViewController.swift in Sources */,
+				374F374826CCEE8E00726D5D /* UIColor-Extension.swift in Sources */,
+				374F36E826CCB4F800726D5D /* ZQHomeViewController.swift in Sources */,
+				374F373E26CCEA6A00726D5D /* ZQPageTitleView.swift in Sources */,
+				374F36ED26CCB50400726D5D /* ZQLiveViewController.swift in Sources */,
+				374F36F226CCB51800726D5D /* ZQFollowViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
