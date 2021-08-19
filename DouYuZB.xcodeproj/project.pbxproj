@@ -29,6 +29,9 @@
 		374F377E26CCF7FA00726D5D /* ZQGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F377D26CCF7FA00726D5D /* ZQGameViewController.swift */; };
 		374F378326CCF80900726D5D /* ZQFunnyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F378226CCF80900726D5D /* ZQFunnyViewController.swift */; };
 		374F378826CCF81500726D5D /* ZQAmuseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F378726CCF81500726D5D /* ZQAmuseViewController.swift */; };
+		374F378D26CE029100726D5D /* ZQRecommendheaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F378C26CE029100726D5D /* ZQRecommendheaderView.swift */; };
+		374F379D26CE095B00726D5D /* ZQNormalCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F379C26CE095B00726D5D /* ZQNormalCollectionCell.swift */; };
+		374F37A226CE2CB600726D5D /* ZQBeautifulCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F37A126CE2CB600726D5D /* ZQBeautifulCollectionCell.swift */; };
 		477A0F59C483CCDC384EF6C0 /* Pods_DouYuZB_DouYuZBUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC10A5DDFE6C7C5221414A51 /* Pods_DouYuZB_DouYuZBUITests.framework */; };
 		59EF45BD4A7EA021AAADAACF /* Pods_DouYuZB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A69A928FB856A3CF019B133A /* Pods_DouYuZB.framework */; };
 		EAF42F29EC9C695A9DB91264 /* Pods_DouYuZBTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B113F287F073052F739174AD /* Pods_DouYuZBTests.framework */; };
@@ -82,6 +85,9 @@
 		374F377D26CCF7FA00726D5D /* ZQGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZQGameViewController.swift; sourceTree = "<group>"; };
 		374F378226CCF80900726D5D /* ZQFunnyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZQFunnyViewController.swift; sourceTree = "<group>"; };
 		374F378726CCF81500726D5D /* ZQAmuseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZQAmuseViewController.swift; sourceTree = "<group>"; };
+		374F378C26CE029100726D5D /* ZQRecommendheaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZQRecommendheaderView.swift; sourceTree = "<group>"; };
+		374F379C26CE095B00726D5D /* ZQNormalCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZQNormalCollectionCell.swift; sourceTree = "<group>"; };
+		374F37A126CE2CB600726D5D /* ZQBeautifulCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZQBeautifulCollectionCell.swift; sourceTree = "<group>"; };
 		6D7A382CE0BEB9E5910E5983 /* Pods-DouYuZB-DouYuZBUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouYuZB-DouYuZBUITests.debug.xcconfig"; path = "Target Support Files/Pods-DouYuZB-DouYuZBUITests/Pods-DouYuZB-DouYuZBUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		81984484899F92C754B02181 /* Pods-DouYuZB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouYuZB.debug.xcconfig"; path = "Target Support Files/Pods-DouYuZB/Pods-DouYuZB.debug.xcconfig"; sourceTree = "<group>"; };
 		9EA72B966A61B10796F9DE0B /* Pods-DouYuZB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouYuZB.release.xcconfig"; path = "Target Support Files/Pods-DouYuZB/Pods-DouYuZB.release.xcconfig"; sourceTree = "<group>"; };
@@ -266,6 +272,8 @@
 			children = (
 				374F373D26CCEA6A00726D5D /* ZQPageTitleView.swift */,
 				374F375226CCF53A00726D5D /* ZQPageContentView.swift */,
+				374F379C26CE095B00726D5D /* ZQNormalCollectionCell.swift */,
+				374F37A126CE2CB600726D5D /* ZQBeautifulCollectionCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -655,6 +663,7 @@
 		374F377826CCF7E900726D5D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				374F378C26CE029100726D5D /* ZQRecommendheaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -943,6 +952,7 @@
 				374F373926CCDC1B00726D5D /* UIBarButtonItem-Extension.swift in Sources */,
 				374F378826CCF81500726D5D /* ZQAmuseViewController.swift in Sources */,
 				374F370126CCB64F00726D5D /* ZQNavigationController.swift in Sources */,
+				374F378D26CE029100726D5D /* ZQRecommendheaderView.swift in Sources */,
 				374F36FC26CCB54600726D5D /* ZQMainViewController.swift in Sources */,
 				374F373326CCBC8900726D5D /* R.generated.swift in Sources */,
 				374F375326CCF53A00726D5D /* ZQPageContentView.swift in Sources */,
@@ -950,6 +960,8 @@
 				374F374326CCED9F00726D5D /* Common.swift in Sources */,
 				374F35FD26CB9C1600726D5D /* AppDelegate.swift in Sources */,
 				374F36E026CCB4DB00726D5D /* ZQBaseViewController.swift in Sources */,
+				374F37A226CE2CB600726D5D /* ZQBeautifulCollectionCell.swift in Sources */,
+				374F379D26CE095B00726D5D /* ZQNormalCollectionCell.swift in Sources */,
 				374F377E26CCF7FA00726D5D /* ZQGameViewController.swift in Sources */,
 				374F378326CCF80900726D5D /* ZQFunnyViewController.swift in Sources */,
 				374F36F726CCB52A00726D5D /* ZQProfileViewController.swift in Sources */,

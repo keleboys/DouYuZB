@@ -10,6 +10,7 @@ target 'DouYuZB' do
   pod 'Alamofire'
   pod 'Kingfisher'
   pod 'R.swift'
+  pod 'SnapKit'
 
   target 'DouYuZBTests' do
     inherit! :search_paths

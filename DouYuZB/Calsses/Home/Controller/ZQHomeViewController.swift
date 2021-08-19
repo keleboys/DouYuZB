@@ -21,6 +21,21 @@ class ZQHomeViewController: ZQBaseViewController, PageTitleViewDelegate, PageCon
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.red
+        
+        let num = 4.15
+        let num2 = 4.85
+        
+        print("floor:\(floor(num+0.5))")//向下取整 4.0
+        print("floor:\(floor(num2))")//向下取整 4.0
+        
+        print("ceil:\(ceil(num))")//向上取整5.0
+        print("ceil:\(ceil(num2))")//向上取整5.0
+        
+        print("rounded:\(num.rounded())")//四舍五入4.0
+        print("rounded:\(num2.rounded())")//四舍五入5.0
+        
+        print("pow:\(pow(10, 2))") // 幂运算 100
+        
     }
     
     
@@ -70,12 +85,19 @@ class ZQHomeViewController: ZQBaseViewController, PageTitleViewDelegate, PageCon
     }()
     
     private lazy var pageContentView: ZQPageContentView = { [weak self] in
-        let top = navigationController?.navigationBar.frame.height
-        let height = screenHeight-top!-(tabBarController?.tabBar.frame.height)!
-        let rect =  CGRect(x: 0, y: top!, width: screenWidth, height: height)
+        let top = (navigationController?.navigationBar.frame.height)!+UIApplication.shared.statusBarFrame.height
+        let bottom = tabBarController?.tabBar.frame.height
+        print(("top\(top )"))
+        print(("bottom\(bottom ?? 0)"))
+        let height = screenHeight-top-bottom!-pageTitleView.frame.height
+        print(("screenHeight\(screenHeight )"))
+        print(("height\(height )"))
+        let rect =  CGRect(x: 0, y: pageTitleView.frame.height, width: screenWidth, height: height)
         // 2.确定所有的子控制器
         var childVcs = [UIViewController]()
-        childVcs.append(ZQRecommendViewController())
+        let recommendVC = ZQRecommendViewController()
+        recommendVC.contentHeight = height
+        childVcs.append(recommendVC)
         childVcs.append(ZQGameViewController())
         childVcs.append(ZQAmuseViewController())
         childVcs.append(ZQFunnyViewController())

@@ -125,7 +125,7 @@ extension ZQPageContentView : UICollectionViewDelegate {
         let scrollViewW = scrollView.bounds.width
         if currentOffsetX > startOffsetX { // 左滑
             // 1.计算progress
-            progress = currentOffsetX / scrollViewW - floor(currentOffsetX / scrollViewW)
+            progress = currentOffsetX / scrollViewW - floor(currentOffsetX / scrollViewW) //取余
             
             // 2.计算sourceIndex
             sourceIndex = Int(currentOffsetX / scrollViewW)

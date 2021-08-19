@@ -130,7 +130,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 28 images.
+  /// This `R.image` struct is generated, and contains static references to 29 images.
   struct image {
     /// Image `Image_my_history_click`.
     static let image_my_history_click = Rswift.ImageResource(bundle: R.hostingBundle, name: "Image_my_history_click")
@@ -158,6 +158,8 @@ struct R: Rswift.Validatable {
     static let btn_live_normal = Rswift.ImageResource(bundle: R.hostingBundle, name: "btn_live_normal")
     /// Image `btn_live_selected`.
     static let btn_live_selected = Rswift.ImageResource(bundle: R.hostingBundle, name: "btn_live_selected")
+    /// Image `btn_more`.
+    static let btn_more = Rswift.ImageResource(bundle: R.hostingBundle, name: "btn_more")
     /// Image `btn_search_clicked`.
     static let btn_search_clicked = Rswift.ImageResource(bundle: R.hostingBundle, name: "btn_search_clicked")
     /// Image `btn_search`.
@@ -277,6 +279,13 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "btn_live_selected", bundle: ..., traitCollection: ...)`
     static func btn_live_selected(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.btn_live_selected, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "btn_more", bundle: ..., traitCollection: ...)`
+    static func btn_more(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.btn_more, compatibleWith: traitCollection)
     }
     #endif
 
