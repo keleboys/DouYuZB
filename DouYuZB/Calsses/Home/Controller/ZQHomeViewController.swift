@@ -10,7 +10,7 @@ import UIKit
 
 class ZQHomeViewController: ZQBaseViewController, PageTitleViewDelegate, PageContentViewDelegate {
    
-    //MARK: - life cycle
+    // MARK: - life cycle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 //        navigationController!.navigationBar.clipsToBounds = true;
@@ -25,14 +25,14 @@ class ZQHomeViewController: ZQBaseViewController, PageTitleViewDelegate, PageCon
         let num = 4.15
         let num2 = 4.85
         
-        print("floor:\(floor(num+0.5))")//向下取整 4.0
-        print("floor:\(floor(num2))")//向下取整 4.0
+        print("floor:\(floor(num+0.5))") // 向下取整 4.0
+        print("floor:\(floor(num2))") // 向下取整 4.0
         
-        print("ceil:\(ceil(num))")//向上取整5.0
-        print("ceil:\(ceil(num2))")//向上取整5.0
+        print("ceil:\(ceil(num))") // 向上取整5.0
+        print("ceil:\(ceil(num2))") // 向上取整5.0
         
-        print("rounded:\(num.rounded())")//四舍五入4.0
-        print("rounded:\(num2.rounded())")//四舍五入5.0
+        print("rounded:\(num.rounded())") // 四舍五入4.0
+        print("rounded:\(num2.rounded())") // 四舍五入5.0
         
         print("pow:\(pow(10, 2))") // 幂运算 100
         
@@ -49,17 +49,17 @@ class ZQHomeViewController: ZQBaseViewController, PageTitleViewDelegate, PageCon
         view.addSubview(pageContentView)
     }
     
-    //MARK: - PageTitleViewDelegate
+    // MARK: - PageTitleViewDelegate
     func pageTitleView(_ titleView: ZQPageTitleView, selectedIndex index: Int) {
         print(index)
         pageContentView.setCurrentIndex(index)
     }
-    //MARK: - PageContentViewDelegate
+    // MARK: - PageContentViewDelegate
     func pageContentView(_ contentView: ZQPageContentView, progress: CGFloat, sourceIndex: Int, targetIndex: Int) {
         pageTitleView.setTitleWithProgress(progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
     }
     
-    //MARK: - event response
+    // MARK: - event response
     @objc func leftNavigationBarClickAction() {
         print("leftNavigationBarClickAction")
     }
@@ -76,7 +76,7 @@ class ZQHomeViewController: ZQBaseViewController, PageTitleViewDelegate, PageCon
         print("searchBarButtonItemClickAction")
     }
     
-    //MARK: - lazy
+    // MARK: - lazy
     private lazy var pageTitleView: ZQPageTitleView = {
         let rect =  CGRect(x: 0, y: 0, width: screenWidth, height: 44)
         let view = ZQPageTitleView(frame: rect, titles: ["推荐", "游戏", "娱乐", "趣玩"])
@@ -107,7 +107,7 @@ class ZQHomeViewController: ZQBaseViewController, PageTitleViewDelegate, PageCon
     }()
 }
 
-extension ZQHomeViewController{
+extension ZQHomeViewController {
     func setupNavigationBar() {
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(norImage: R.image.logo()!, target: self, sel: #selector(leftNavigationBarClickAction))

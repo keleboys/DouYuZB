@@ -26,7 +26,7 @@ class ZQBeautifulCollectionCell: UICollectionViewCell {
         super.layoutSubviews()
         addressView.snp.makeConstraints { (make) in
             make.bottom.equalTo(-10)
-            make.left.equalTo(10)
+            make.left.equalTo(0)
             make.width.equalTo(15)
             make.height.equalTo(15)
         }
@@ -39,7 +39,7 @@ class ZQBeautifulCollectionCell: UICollectionViewCell {
         
         nameLabel.snp.makeConstraints { (make) in
             make.bottom.equalTo(addressView.snp_top).offset(-5)
-            make.left.equalTo(10)
+            make.left.equalTo(addressView)
             make.right.equalTo(-10)
             make.height.equalTo(20)
         }
@@ -54,6 +54,24 @@ class ZQBeautifulCollectionCell: UICollectionViewCell {
             make.right.equalTo(-5)
             make.width.lessThanOrEqualTo(self.frame.width*0.35)
             make.height.equalTo(18)
+        }
+    }
+    
+    var anchor: AnchorModel? {
+        didSet {
+            nameLabel.text = anchor?.room_name
+            addressLabel.text = anchor?.anchor_city
+            // 1.取出在线人数显示的文字
+            var onlineStr : String = ""
+            if anchor!.online >= 10000 {
+                onlineStr = "  \(Int(anchor!.online / 10000))万在线  "
+            } else {
+                onlineStr = "  \(anchor!.online)在线  "
+            }
+            onlineLabel.text = onlineStr
+            
+            guard let iconURL = URL(string: anchor!.vertical_src) else { return }
+            coverView.kf.setImage(with: iconURL, placeholder: R.image.img_default())
         }
     }
     

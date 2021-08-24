@@ -18,12 +18,12 @@ class ZQNavigationController: UINavigationController {
         guard navView != nil else {return}
     }
     
-    //MARK: 重写跳转
+    // MARK: 重写跳转
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
         
         if self.viewControllers.count>0 {
             
-            viewController.hidesBottomBarWhenPushed = true //跳转之后隐藏
+            viewController.hidesBottomBarWhenPushed = true // 跳转之后隐藏
         }
         
         super.pushViewController(viewController, animated: true)

@@ -32,6 +32,15 @@
 		374F378D26CE029100726D5D /* ZQRecommendheaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F378C26CE029100726D5D /* ZQRecommendheaderView.swift */; };
 		374F379D26CE095B00726D5D /* ZQNormalCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F379C26CE095B00726D5D /* ZQNormalCollectionCell.swift */; };
 		374F37A226CE2CB600726D5D /* ZQBeautifulCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F37A126CE2CB600726D5D /* ZQBeautifulCollectionCell.swift */; };
+		374F38A426CF848100726D5D /* RecommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F38A326CF848100726D5D /* RecommendViewModel.swift */; };
+		374F38A926CF901A00726D5D /* AnchorGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F38A826CF901A00726D5D /* AnchorGroup.swift */; };
+		374F38BB26CF919E00726D5D /* AnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F38BA26CF919E00726D5D /* AnchorModel.swift */; };
+		374F38C026CF965700726D5D /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F38BF26CF965700726D5D /* NetworkTools.swift */; };
+		374F38C826CF968B00726D5D /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F38C726CF968B00726D5D /* BaseViewModel.swift */; };
+		374F38CD26CF975D00726D5D /* NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F38CC26CF975D00726D5D /* NSDate-Extension.swift */; };
+		374F38EB26D3521500726D5D /* ZQRecommendCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F38EA26D3521500726D5D /* ZQRecommendCycleView.swift */; };
+		374F390026D3788900726D5D /* ZQCycleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F38FF26D3788900726D5D /* ZQCycleModel.swift */; };
+		374F390826D387D300726D5D /* ZQRecommendGamesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F390726D387D200726D5D /* ZQRecommendGamesView.swift */; };
 		477A0F59C483CCDC384EF6C0 /* Pods_DouYuZB_DouYuZBUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC10A5DDFE6C7C5221414A51 /* Pods_DouYuZB_DouYuZBUITests.framework */; };
 		59EF45BD4A7EA021AAADAACF /* Pods_DouYuZB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A69A928FB856A3CF019B133A /* Pods_DouYuZB.framework */; };
 		EAF42F29EC9C695A9DB91264 /* Pods_DouYuZBTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B113F287F073052F739174AD /* Pods_DouYuZBTests.framework */; };
@@ -88,6 +97,15 @@
 		374F378C26CE029100726D5D /* ZQRecommendheaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZQRecommendheaderView.swift; sourceTree = "<group>"; };
 		374F379C26CE095B00726D5D /* ZQNormalCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZQNormalCollectionCell.swift; sourceTree = "<group>"; };
 		374F37A126CE2CB600726D5D /* ZQBeautifulCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZQBeautifulCollectionCell.swift; sourceTree = "<group>"; };
+		374F38A326CF848100726D5D /* RecommendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewModel.swift; sourceTree = "<group>"; };
+		374F38A826CF901A00726D5D /* AnchorGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorGroup.swift; sourceTree = "<group>"; };
+		374F38BA26CF919E00726D5D /* AnchorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorModel.swift; sourceTree = "<group>"; };
+		374F38BF26CF965700726D5D /* NetworkTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
+		374F38C726CF968B00726D5D /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		374F38CC26CF975D00726D5D /* NSDate-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDate-Extension.swift"; sourceTree = "<group>"; };
+		374F38EA26D3521500726D5D /* ZQRecommendCycleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZQRecommendCycleView.swift; sourceTree = "<group>"; };
+		374F38FF26D3788900726D5D /* ZQCycleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZQCycleModel.swift; sourceTree = "<group>"; };
+		374F390726D387D200726D5D /* ZQRecommendGamesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZQRecommendGamesView.swift; sourceTree = "<group>"; };
 		6D7A382CE0BEB9E5910E5983 /* Pods-DouYuZB-DouYuZBUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouYuZB-DouYuZBUITests.debug.xcconfig"; path = "Target Support Files/Pods-DouYuZB-DouYuZBUITests/Pods-DouYuZB-DouYuZBUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		81984484899F92C754B02181 /* Pods-DouYuZB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouYuZB.debug.xcconfig"; path = "Target Support Files/Pods-DouYuZB/Pods-DouYuZB.debug.xcconfig"; sourceTree = "<group>"; };
 		9EA72B966A61B10796F9DE0B /* Pods-DouYuZB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouYuZB.release.xcconfig"; path = "Target Support Files/Pods-DouYuZB/Pods-DouYuZB.release.xcconfig"; sourceTree = "<group>"; };
@@ -195,41 +213,10 @@
 			isa = PBXGroup;
 			children = (
 				374F373726CCDBD600726D5D /* Extension */,
-				374F36A726CCAFD000726D5D /* ViewModel */,
-				374F36A826CCAFD000726D5D /* Controller */,
-				374F36A926CCAFD000726D5D /* Model */,
-				374F36AA26CCAFD000726D5D /* View */,
 				374F374226CCED9F00726D5D /* Common.swift */,
+				374F38BF26CF965700726D5D /* NetworkTools.swift */,
 			);
 			path = Tools;
-			sourceTree = "<group>";
-		};
-		374F36A726CCAFD000726D5D /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		374F36A826CCAFD000726D5D /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		374F36A926CCAFD000726D5D /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		374F36AA26CCAFD000726D5D /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		374F36AB26CCAFD000726D5D /* Main */ = {
@@ -246,6 +233,7 @@
 		374F36AC26CCAFD000726D5D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				374F38C726CF968B00726D5D /* BaseViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -263,6 +251,8 @@
 		374F36AE26CCAFD000726D5D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				374F38A826CF901A00726D5D /* AnchorGroup.swift */,
+				374F38BA26CF919E00726D5D /* AnchorModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -467,6 +457,7 @@
 		374F36C726CCAFD100726D5D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				374F38FF26D3788900726D5D /* ZQCycleModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -492,6 +483,7 @@
 			children = (
 				374F373826CCDC1B00726D5D /* UIBarButtonItem-Extension.swift */,
 				374F374726CCEE8E00726D5D /* UIColor-Extension.swift */,
+				374F38CC26CF975D00726D5D /* NSDate-Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -641,6 +633,7 @@
 		374F377426CCF7E900726D5D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				374F38A326CF848100726D5D /* RecommendViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -664,6 +657,8 @@
 			isa = PBXGroup;
 			children = (
 				374F378C26CE029100726D5D /* ZQRecommendheaderView.swift */,
+				374F38EA26D3521500726D5D /* ZQRecommendCycleView.swift */,
+				374F390726D387D200726D5D /* ZQRecommendGamesView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -840,7 +835,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/DouYuZB/Resources/R.generated.swift\"\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/DouYuZB/Resources/R.generated.swift\"\n";
 		};
 		7C2C3F0EFA177EDB75032A39 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -951,20 +946,29 @@
 			files = (
 				374F373926CCDC1B00726D5D /* UIBarButtonItem-Extension.swift in Sources */,
 				374F378826CCF81500726D5D /* ZQAmuseViewController.swift in Sources */,
+				374F390826D387D300726D5D /* ZQRecommendGamesView.swift in Sources */,
 				374F370126CCB64F00726D5D /* ZQNavigationController.swift in Sources */,
+				374F38A426CF848100726D5D /* RecommendViewModel.swift in Sources */,
 				374F378D26CE029100726D5D /* ZQRecommendheaderView.swift in Sources */,
 				374F36FC26CCB54600726D5D /* ZQMainViewController.swift in Sources */,
 				374F373326CCBC8900726D5D /* R.generated.swift in Sources */,
+				374F38C826CF968B00726D5D /* BaseViewModel.swift in Sources */,
+				374F38A926CF901A00726D5D /* AnchorGroup.swift in Sources */,
+				374F390026D3788900726D5D /* ZQCycleModel.swift in Sources */,
 				374F375326CCF53A00726D5D /* ZQPageContentView.swift in Sources */,
+				374F38CD26CF975D00726D5D /* NSDate-Extension.swift in Sources */,
 				374F377926CCF7E900726D5D /* ZQRecommendViewController.swift in Sources */,
 				374F374326CCED9F00726D5D /* Common.swift in Sources */,
 				374F35FD26CB9C1600726D5D /* AppDelegate.swift in Sources */,
+				374F38C026CF965700726D5D /* NetworkTools.swift in Sources */,
 				374F36E026CCB4DB00726D5D /* ZQBaseViewController.swift in Sources */,
 				374F37A226CE2CB600726D5D /* ZQBeautifulCollectionCell.swift in Sources */,
 				374F379D26CE095B00726D5D /* ZQNormalCollectionCell.swift in Sources */,
 				374F377E26CCF7FA00726D5D /* ZQGameViewController.swift in Sources */,
+				374F38BB26CF919E00726D5D /* AnchorModel.swift in Sources */,
 				374F378326CCF80900726D5D /* ZQFunnyViewController.swift in Sources */,
 				374F36F726CCB52A00726D5D /* ZQProfileViewController.swift in Sources */,
+				374F38EB26D3521500726D5D /* ZQRecommendCycleView.swift in Sources */,
 				374F374826CCEE8E00726D5D /* UIColor-Extension.swift in Sources */,
 				374F36E826CCB4F800726D5D /* ZQHomeViewController.swift in Sources */,
 				374F373E26CCEA6A00726D5D /* ZQPageTitleView.swift in Sources */,

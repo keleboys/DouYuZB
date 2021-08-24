@@ -8,23 +8,23 @@
 import UIKit
 
 
-protocol PageContentViewDelegate : class {
-    func pageContentView(_ contentView : ZQPageContentView, progress : CGFloat, sourceIndex : Int, targetIndex : Int)
+protocol PageContentViewDelegate: class {
+    func pageContentView(_ contentView: ZQPageContentView, progress: CGFloat, sourceIndex: Int, targetIndex: Int)
 }
 
-private let ContentCellID = "ContentCellID"
+private let contentCellID = "ContentCellID"
 
 class ZQPageContentView: UIView {
     
-    // MARK:- 定义属性
-    fileprivate var childVcs : [UIViewController]
-    fileprivate weak var parentViewController : UIViewController?
-    fileprivate var startOffsetX : CGFloat = 0
-    fileprivate var isForbidScrollDelegate : Bool = false
-    weak var delegate : PageContentViewDelegate?
+    // MARK: - 定义属性
+    fileprivate var childVcs: [UIViewController]
+    fileprivate weak var parentViewController: UIViewController?
+    fileprivate var startOffsetX: CGFloat = 0
+    fileprivate var isForbidScrollDelegates: Bool = false
+    weak var delegate: PageContentViewDelegate?
     
-    // MARK:- 懒加载属性
-    fileprivate lazy var collectionView : UICollectionView = {[weak self] in
+    // MARK: - 懒加载属性
+    fileprivate lazy var collectionView: UICollectionView = {[weak self] in
         // 1.创建layout
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = (self?.bounds.size)!
@@ -40,13 +40,13 @@ class ZQPageContentView: UIView {
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.scrollsToTop = false
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: ContentCellID)
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: contentCellID)
         
         return collectionView
     }()
     
-    // MARK:- 自定义构造函数
-    init(frame: CGRect, childVcs : [UIViewController], parentViewController : UIViewController?) {
+    // MARK: - 自定义构造函数
+    init(frame: CGRect, childVcs: [UIViewController], parentViewController: UIViewController?) {
         self.childVcs = childVcs
         self.parentViewController = parentViewController
         
@@ -62,7 +62,7 @@ class ZQPageContentView: UIView {
 
 }
 
-// MARK:- 设置UI界面
+// MARK: - 设置UI界面
 extension ZQPageContentView {
     fileprivate func setupUI() {
         // 1.将所有的子控制器添加父控制器中
@@ -77,15 +77,15 @@ extension ZQPageContentView {
 }
 
 
-// MARK:- 遵守UICollectionViewDataSource
-extension ZQPageContentView : UICollectionViewDataSource {
+// MARK: - 遵守UICollectionViewDataSource
+extension ZQPageContentView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return childVcs.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         // 1.创建Cell
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ContentCellID, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: contentCellID, for: indexPath)
         
         // 2.给Cell设置内容
         for view in cell.contentView.subviews {
@@ -100,12 +100,12 @@ extension ZQPageContentView : UICollectionViewDataSource {
     }
 }
 
-// MARK:- 遵守UICollectionViewDelegate
-extension ZQPageContentView : UICollectionViewDelegate {
+// MARK: - 遵守UICollectionViewDelegate
+extension ZQPageContentView: UICollectionViewDelegate {
     
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         
-        isForbidScrollDelegate = false
+        isForbidScrollDelegates = false
         
         startOffsetX = scrollView.contentOffset.x
     }
@@ -113,19 +113,19 @@ extension ZQPageContentView : UICollectionViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
         // 0.判断是否是点击事件
-        if isForbidScrollDelegate { return }
+        if isForbidScrollDelegates { return }
         
         // 1.定义获取需要的数据
-        var progress : CGFloat = 0
-        var sourceIndex : Int = 0
-        var targetIndex : Int = 0
+        var progress: CGFloat = 0
+        var sourceIndex: Int = 0
+        var targetIndex: Int = 0
         
         // 2.判断是左滑还是右滑
         let currentOffsetX = scrollView.contentOffset.x
         let scrollViewW = scrollView.bounds.width
         if currentOffsetX > startOffsetX { // 左滑
             // 1.计算progress
-            progress = currentOffsetX / scrollViewW - floor(currentOffsetX / scrollViewW) //取余
+            progress = currentOffsetX / scrollViewW - floor(currentOffsetX / scrollViewW) // 取余
             
             // 2.计算sourceIndex
             sourceIndex = Int(currentOffsetX / scrollViewW)
@@ -161,12 +161,12 @@ extension ZQPageContentView : UICollectionViewDelegate {
 }
 
 
-// MARK:- 对外暴露的方法
+// MARK: - 对外暴露的方法
 extension ZQPageContentView {
-    func setCurrentIndex(_ currentIndex : Int) {
+    func setCurrentIndex(_ currentIndex: Int) {
         
         // 1.记录需要进制执行代理方法
-        isForbidScrollDelegate = true
+        isForbidScrollDelegates = true
         
         // 2.滚动正确的位置
         let offsetX = CGFloat(currentIndex) * collectionView.frame.width

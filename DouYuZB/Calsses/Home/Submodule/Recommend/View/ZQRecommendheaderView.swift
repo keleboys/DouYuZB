@@ -31,7 +31,7 @@ class ZQRecommendheaderView: UICollectionReusableView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    @objc func tapAction(){
+    @objc func tapAction() {
         self.delegate?.recommendheaderViewWithClickMoreAction(0)
     }
     
@@ -65,7 +65,15 @@ class ZQRecommendheaderView: UICollectionReusableView {
         }
     }
     
-    lazy var iconView: UIImageView = {
+    // MARK: - 定义模型属性
+    var group : AnchorGroup? {
+        didSet {
+            titleLabel.text = group?.tag_name
+            iconView.image = UIImage(named: group?.icon_name ?? "home_header_normal")
+        }
+    }
+    
+    private lazy var iconView: UIImageView = {
         let iconView = UIImageView()
         return iconView
     }()
@@ -75,7 +83,7 @@ class ZQRecommendheaderView: UICollectionReusableView {
         return arrowView
     }()
     
-    lazy var titleLabel: UILabel = {
+    private lazy var titleLabel: UILabel = {
         let titleLabel = UILabel()
         titleLabel.font = UIFont.systemFont(ofSize: 16)
         titleLabel.textColor = .black

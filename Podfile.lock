@@ -1,32 +1,40 @@
 PODS:
   - Alamofire (4.9.1)
+  - HandyJSON (5.0.2)
   - Kingfisher (4.10.1)
   - R.swift (5.4.0):
     - R.swift.Library (~> 5.3.0)
   - R.swift.Library (5.3.0)
   - SnapKit (4.2.0)
+  - SwiftLint (0.43.1)
 
 DEPENDENCIES:
   - Alamofire
+  - HandyJSON (~> 5.0.2)
   - Kingfisher
   - R.swift
   - SnapKit
+  - SwiftLint
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - HandyJSON
     - Kingfisher
     - R.swift
     - R.swift.Library
     - SnapKit
+    - SwiftLint
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   R.swift: c533450b0f7dc494e0993f5f1a1db925d84c3006
   R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  SwiftLint: 99f82d07b837b942dd563c668de129a03fc3fb52
 
-PODFILE CHECKSUM: 195a32f96eaeed539be920a6661969a611ae3d83
+PODFILE CHECKSUM: de320f6784028a16e69284e9fbd51307443ad49b
 
 COCOAPODS: 1.10.2

@@ -11,6 +11,8 @@ private let itemMargin: CGFloat = 10
 private let normalItemWidth: CGFloat = (screenWidth - itemMargin*3)*0.5
 private let normalItemHeight = normalItemWidth*0.75
 private let prettyItemHeight = normalItemWidth*4/3
+private let cycleViewHeight = screenWidth*3/8
+private let gamesViewHeight: CGFloat = 90
 
 private let headerHeight: CGFloat = 50
 private let COLLECTIONVIEWNORMALCELLID = "collectionViewNormalCellID"
@@ -19,6 +21,7 @@ private let kHeaderViewID = "kHeaderViewID"
 class ZQRecommendViewController: ZQBaseViewController {
     
     var contentHeight: CGFloat = 0.0
+    private lazy var viewModel = RecommendViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,17 +29,26 @@ class ZQRecommendViewController: ZQBaseViewController {
     }
     
     override func initViews() {
-        
         view.addSubview(collectionView)
+        
+        collectionView.addSubview(cycleView)
+        
+        collectionView.addSubview(gamesView)
+        
+        collectionView.contentInset = UIEdgeInsets(top: cycleViewHeight+gamesViewHeight, left: 0, bottom: 0, right: 0)
     }
     
+    override func initDatas() {
+        super.initDatas()
+        loadData()
+    }
+
     private lazy var collectionView: UICollectionView = { [unowned self] in
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = itemMargin
         layout.headerReferenceSize = CGSize(width: screenWidth, height: headerHeight)
-        layout.footerReferenceSize = CGSize.zero
-        layout.sectionInset = UIEdgeInsets(top: 0, left: itemMargin, bottom: itemMargin, right: itemMargin)
+        layout.sectionInset = UIEdgeInsets(top: 0, left: itemMargin, bottom: 0, right: itemMargin)
 
         let collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout: layout)
         collectionView.delegate = self
@@ -48,24 +60,26 @@ class ZQRecommendViewController: ZQBaseViewController {
         collectionView.register(ZQRecommendheaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: kHeaderViewID)
         return collectionView
     }()
-
+    
+    private lazy var cycleView: ZQRecommendCycleView = {
+        let cycleView = ZQRecommendCycleView(frame: CGRect(x: 0, y: -cycleViewHeight-gamesViewHeight, width: screenWidth, height: cycleViewHeight))
+        return cycleView
+    }()
+    
+    private lazy var gamesView: ZQRecommendGamesView = {
+        let gamesView = ZQRecommendGamesView(frame: CGRect(x: 0, y: -gamesViewHeight, width: screenWidth, height: gamesViewHeight))
+        return gamesView
+    }()
 }
 
-extension ZQRecommendViewController{
-    
-    
-}
-
-extension ZQRecommendViewController: UICollectionViewDelegate{
+extension ZQRecommendViewController: UICollectionViewDelegate {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 12
+        return self.viewModel.anchorGroups.count
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if section == 0 {
-            return 8
-        }
-        return 4
+        let group: AnchorGroup = self.viewModel.anchorGroups[section]
+        return group.anchors.count
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -73,7 +87,7 @@ extension ZQRecommendViewController: UICollectionViewDelegate{
     }
 }
 
-extension ZQRecommendViewController: UICollectionViewDelegateFlowLayout{
+extension ZQRecommendViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if indexPath.section == 1 {
             return CGSize(width: normalItemWidth, height: prettyItemHeight)
@@ -83,35 +97,62 @@ extension ZQRecommendViewController: UICollectionViewDelegateFlowLayout{
     }
 }
 
-extension ZQRecommendViewController: UICollectionViewDataSource{
+extension ZQRecommendViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let group: AnchorGroup = self.viewModel.anchorGroups[indexPath.section]
         let headerView: ZQRecommendheaderView = (collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: kHeaderViewID, for: indexPath) as? ZQRecommendheaderView)!
-        headerView.titleLabel.text = "手机"
-        headerView.iconView.image = R.image.home_header_phone()
+        headerView.group = group
         headerView.delegate = self
         return headerView
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let group: AnchorGroup = self.viewModel.anchorGroups[indexPath.section]
         if indexPath.section == 1 {
             let cell: ZQBeautifulCollectionCell = collectionView.dequeueReusableCell(withReuseIdentifier: COLLECTIONVIEWBEAUTIFULCELLID, for: indexPath) as! ZQBeautifulCollectionCell
-            cell.nameLabel.text = "来例子"
-            cell.addressLabel.text = "大女解放军"
-            cell.onlineLabel.text = "  9999999人在线  "
+            cell.anchor = group.anchors[indexPath.row]
             return cell
-        }else{
+        } else {
             let cell: ZQNormalCollectionCell = collectionView.dequeueReusableCell(withReuseIdentifier: COLLECTIONVIEWNORMALCELLID, for: indexPath) as! ZQNormalCollectionCell
-            cell.titleLabel.text = "小李子"
-            cell.onlineLabel.text = "999999999人在线"
-            cell.nameLabel.text = "东方播哦哦哦哦不不不"
+            cell.anchor = group.anchors[indexPath.row]
             return cell
         }
-        
     }
 }
 
-extension ZQRecommendViewController: ZQRecommendheaderViewDelegate{
+extension ZQRecommendViewController: ZQRecommendheaderViewDelegate {
     func recommendheaderViewWithClickMoreAction(_ index: Int) {
         print(index)
+    }
+}
+
+extension ZQRecommendViewController {
+    func loadData() {
+        viewModel.requestData {
+            self.collectionView.reloadData()
+            
+            // 2.将数据传递给GameView
+            var groups = self.viewModel.anchorGroups
+            
+            // 2.1.移除前两组数据
+            groups.removeFirst()
+            groups.removeFirst()
+            
+            // 2.2.添加更多组
+            let moreGroup = AnchorGroup()
+            moreGroup.tag_name = "更多"
+            moreGroup.icon_name = "home_more_btn"
+            groups.append(moreGroup)
+            
+            self.gamesView.cycleModels = groups
+            
+            // 3.数据请求完成
+//            self.loadDataFinished()
+        }
+        
+        viewModel.requestCycleData{
+            print(self.viewModel.cycleModels)
+            self.cycleView.cycleModels = self.viewModel.cycleModels
+        }
     }
 }

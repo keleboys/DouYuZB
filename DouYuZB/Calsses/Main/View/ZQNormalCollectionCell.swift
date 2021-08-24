@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ZQNormalCollectionCell: UICollectionViewCell {
     
@@ -27,7 +28,7 @@ class ZQNormalCollectionCell: UICollectionViewCell {
         super.layoutSubviews()
         videoView.snp.makeConstraints { (make) in
             make.bottom.equalTo(-10)
-            make.left.equalTo(10)
+            make.left.equalTo(0)
             make.width.equalTo(15)
             make.height.equalTo(15)
         }
@@ -62,6 +63,24 @@ class ZQNormalCollectionCell: UICollectionViewCell {
             make.left.equalTo(10)
             make.right.equalTo(onlineView.snp_left).offset(-10)
             make.height.equalTo(20)
+        }
+    }
+    
+    var anchor: AnchorModel? {
+        didSet {
+            nameLabel.text = anchor?.room_name
+            titleLabel.text = anchor?.nickname
+            // 1.取出在线人数显示的文字
+            var onlineStr : String = ""
+            if anchor!.online >= 10000 {
+                onlineStr = "  \(Int(anchor!.online / 10000))万在线  "
+            } else {
+                onlineStr = "  \(anchor!.online)在线  "
+            }
+            onlineLabel.text = onlineStr
+            
+            guard let iconURL = URL(string: anchor!.vertical_src) else { return }
+            coverView.kf.setImage(with: iconURL, placeholder: R.image.img_default())
         }
     }
     

@@ -7,41 +7,41 @@
 
 import UIKit
 
-// MARK:- 定义协议
-protocol PageTitleViewDelegate : class {
-    func pageTitleView(_ titleView : ZQPageTitleView, selectedIndex index : Int)
+// MARK: - 定义协议
+protocol PageTitleViewDelegate: class {
+    func pageTitleView(_ titleView: ZQPageTitleView, selectedIndex index: Int)
 }
 
-// MARK:- 定义常量
-private let kScrollLineH : CGFloat = 2
-private let kNormalColor : (CGFloat, CGFloat, CGFloat) = (85, 85, 85)
-private let kSelectColor : (CGFloat, CGFloat, CGFloat) = (255, 128, 0)
+// MARK: - 定义常量
+private let kScrollLineH: CGFloat = 2
+private let kNormalColor: (CGFloat, CGFloat, CGFloat) = (85, 85, 85)
+private let kSelectColor: (CGFloat, CGFloat, CGFloat) = (255, 128, 0)
 
-// MARK:- 定义PageTitleView类
+// MARK: - 定义PageTitleView类
 class ZQPageTitleView: UIView {
     
-    // MARK:- 定义属性
-    fileprivate var currentIndex : Int = 0
-    fileprivate var titles : [String]
-    weak var delegate : PageTitleViewDelegate?
+    // MARK: - 定义属性
+    fileprivate var currentIndex: Int = 0
+    fileprivate var titles: [String]
+    weak var delegate: PageTitleViewDelegate?
     
-    // MARK:- 懒加载属性
-    fileprivate lazy var titleLabels : [UILabel] = [UILabel]()
-    fileprivate lazy var scrollView : UIScrollView = {
+    // MARK: - 懒加载属性
+    fileprivate lazy var titleLabels: [UILabel] = [UILabel]()
+    fileprivate lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.scrollsToTop = false
         scrollView.bounces = false
         return scrollView
     }()
-    fileprivate lazy var scrollLine : UIView = {
+    fileprivate lazy var scrollLine: UIView = {
         let scrollLine = UIView()
         scrollLine.backgroundColor = UIColor.orange
         return scrollLine
     }()
     
-    // MARK:- 自定义构造函数
-    init(frame: CGRect, titles : [String]) {
+    // MARK: - 自定义构造函数
+    init(frame: CGRect, titles: [String]) {
         self.titles = titles
         
         super.init(frame: frame)
@@ -57,7 +57,7 @@ class ZQPageTitleView: UIView {
 }
 
 
-// MARK:- 设置UI界面
+// MARK: - 设置UI界面
 extension ZQPageTitleView {
     fileprivate func setupUI() {
         // 1.添加UIScrollView
@@ -74,9 +74,9 @@ extension ZQPageTitleView {
     fileprivate func setupTitleLabels() {
         
         // 0.确定label的一些frame的值
-        let labelW : CGFloat = frame.width / CGFloat(titles.count)
-        let labelH : CGFloat = frame.height - kScrollLineH
-        let labelY : CGFloat = 0
+        let labelW: CGFloat = frame.width / CGFloat(titles.count)
+        let labelH: CGFloat = frame.height - kScrollLineH
+        let labelY: CGFloat = 0
         
         for (index, title) in titles.enumerated() {
             // 1.创建UILabel
@@ -90,7 +90,7 @@ extension ZQPageTitleView {
             label.textAlignment = .center
             
             // 3.设置label的frame
-            let labelX : CGFloat = labelW * CGFloat(index)
+            let labelX: CGFloat = labelW * CGFloat(index)
             label.frame = CGRect(x: labelX, y: labelY, width: labelW, height: labelH)
             
             // 4.将label添加到scrollView中
@@ -108,7 +108,7 @@ extension ZQPageTitleView {
         // 1.添加底线
         let bottomLine = UIView()
         bottomLine.backgroundColor = UIColor.lightGray
-        let lineH : CGFloat = 0.5
+        let lineH: CGFloat = 0.5
         bottomLine.frame = CGRect(x: 0, y: frame.height - lineH, width: frame.width, height: lineH)
         addSubview(bottomLine)
         
@@ -124,9 +124,9 @@ extension ZQPageTitleView {
 }
 
 
-// MARK:- 监听Label的点击
+// MARK: - 监听Label的点击
 extension ZQPageTitleView {
-    @objc fileprivate func titleLabelClick(_ tapGes : UITapGestureRecognizer) {
+    @objc fileprivate func titleLabelClick(_ tapGes: UITapGestureRecognizer) {
         
         // 0.获取当前Label
         guard let currentLabel = tapGes.view as? UILabel else { return }
@@ -155,9 +155,9 @@ extension ZQPageTitleView {
     }
 }
 
-// MARK:- 对外暴露的方法
+// MARK: - 对外暴露的方法
 extension ZQPageTitleView {
-    func setTitleWithProgress(_ progress : CGFloat, sourceIndex : Int, targetIndex : Int) {
+    func setTitleWithProgress(_ progress: CGFloat, sourceIndex: Int, targetIndex: Int) {
         // 1.取出sourceLabel/targetLabel
         let sourceLabel = titleLabels[sourceIndex]
         let targetLabel = titleLabels[targetIndex]
