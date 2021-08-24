@@ -1,0 +1,39 @@
+#参考文档：https://blog.csdn.net/blog_t/article/details/89025230
+#参考文档：https://github.com/realm/SwiftLint/blob/master/README_CN.md
+excluded: # 执行 linting 时忽略的路径。 优先级比 `included` 更高。
+  - Pods
+  - DouYuZB/Resources
+#  - DouYuZB/Resources/R.generated.swift
+  - DouYuZB/Calsses/Tools/Extension
+
+type_name:
+  min_length: 1 # 只是警告
+  max_length: # 警告和错误
+    warning: 40
+    error: 50
+
+file_length:
+  warning: 500
+  error: 1200
+#  这个意思就是body里的代码行数超过100时会出现warning，当超过200行时，会报error。
+type_body_length:
+  warning: 300
+  error: 400
+
+line_length: 200
+#当出现强制类型转换的时候是提示Error还是Warning
+force_cast: warning # 隐式
+
+# 禁用指定的规则
+disabled_rules:
+ - trailing_whitespace
+ - line_length
+ - vertical_whitespace
+ - identifier_name
+ - colon
+ - void_return
+ 
+large_tuple : #元组成员
+  warning: 6
+  error: 8
+
