@@ -83,21 +83,21 @@ class ZQRecommendGamesCell: UICollectionViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        nameLabel.snp.makeConstraints { (make) in
-            make.left.right.equalTo(0)
-            make.bottom.equalTo(-5)
-            make.height.equalTo(20)
-        }
-        
         coverView.snp.makeConstraints { (make) in
             make.top.equalTo(10)
             make.centerX.equalTo(self)
             make.width.equalTo(50)
             make.height.equalTo(50)
         }
+        
+        nameLabel.snp.makeConstraints { (make) in
+            make.left.right.equalTo(0)
+            make.top.equalTo(coverView.snp_bottom).offset(8)
+            make.height.equalTo(20)
+        }
     }
     
-    var model: AnchorGroup? {
+    var model: ZQBaseGameModel? {
         didSet {
             nameLabel.text = model?.tag_name
             
@@ -121,6 +121,7 @@ class ZQRecommendGamesCell: UICollectionViewCell {
         titleLabel.font = UIFont.systemFont(ofSize: 14)
         titleLabel.textColor = .black
         titleLabel.textAlignment = .center
+        titleLabel.text = "完犊子啦"
         return titleLabel
     }()
     

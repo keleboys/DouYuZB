@@ -55,7 +55,7 @@ extension RecommendViewModel {
             
             // 3.2.获取主播数据
             for dict in dataArray {
-                print(dict)
+//                print(dict)
                 let anchor = AnchorModel.deserialize(from: dict)
                 self.bigDataGroup.anchors.append(anchor!)
             }

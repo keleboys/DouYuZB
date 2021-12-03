@@ -41,6 +41,15 @@
 		374F38EB26D3521500726D5D /* ZQRecommendCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F38EA26D3521500726D5D /* ZQRecommendCycleView.swift */; };
 		374F390026D3788900726D5D /* ZQCycleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F38FF26D3788900726D5D /* ZQCycleModel.swift */; };
 		374F390826D387D300726D5D /* ZQRecommendGamesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F390726D387D200726D5D /* ZQRecommendGamesView.swift */; };
+		374F399026DC770500726D5D /* ZQGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F398F26DC770400726D5D /* ZQGameViewModel.swift */; };
+		374F399526DC77C300726D5D /* ZQBaseGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F399426DC77C300726D5D /* ZQBaseGameModel.swift */; };
+		374F399A26DC782300726D5D /* ZQGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F399926DC782300726D5D /* ZQGameModel.swift */; };
+		374F399F26DCACC400726D5D /* ZQFunnyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F399E26DCACC300726D5D /* ZQFunnyViewModel.swift */; };
+		374F39A426DCAE1500726D5D /* ZQAmuseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F39A326DCAE1500726D5D /* ZQAmuseViewModel.swift */; };
+		374F39A926DCCBBC00726D5D /* ZQBaseAnchorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F39A826DCCBBB00726D5D /* ZQBaseAnchorViewController.swift */; };
+		374F39AE26DCD48500726D5D /* ZQAmuseMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F39AD26DCD48500726D5D /* ZQAmuseMenuView.swift */; };
+		374F39B326DDDB9300726D5D /* ZQRoomShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F39B226DDDB9200726D5D /* ZQRoomShowViewController.swift */; };
+		374F39B826DDDBAA00726D5D /* ZQRoomNormalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374F39B726DDDBAA00726D5D /* ZQRoomNormalViewController.swift */; };
 		477A0F59C483CCDC384EF6C0 /* Pods_DouYuZB_DouYuZBUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC10A5DDFE6C7C5221414A51 /* Pods_DouYuZB_DouYuZBUITests.framework */; };
 		59EF45BD4A7EA021AAADAACF /* Pods_DouYuZB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A69A928FB856A3CF019B133A /* Pods_DouYuZB.framework */; };
 		EAF42F29EC9C695A9DB91264 /* Pods_DouYuZBTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B113F287F073052F739174AD /* Pods_DouYuZBTests.framework */; };
@@ -106,6 +115,15 @@
 		374F38EA26D3521500726D5D /* ZQRecommendCycleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZQRecommendCycleView.swift; sourceTree = "<group>"; };
 		374F38FF26D3788900726D5D /* ZQCycleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZQCycleModel.swift; sourceTree = "<group>"; };
 		374F390726D387D200726D5D /* ZQRecommendGamesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZQRecommendGamesView.swift; sourceTree = "<group>"; };
+		374F398F26DC770400726D5D /* ZQGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZQGameViewModel.swift; sourceTree = "<group>"; };
+		374F399426DC77C300726D5D /* ZQBaseGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZQBaseGameModel.swift; sourceTree = "<group>"; };
+		374F399926DC782300726D5D /* ZQGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZQGameModel.swift; sourceTree = "<group>"; };
+		374F399E26DCACC300726D5D /* ZQFunnyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZQFunnyViewModel.swift; sourceTree = "<group>"; };
+		374F39A326DCAE1500726D5D /* ZQAmuseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZQAmuseViewModel.swift; sourceTree = "<group>"; };
+		374F39A826DCCBBB00726D5D /* ZQBaseAnchorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZQBaseAnchorViewController.swift; sourceTree = "<group>"; };
+		374F39AD26DCD48500726D5D /* ZQAmuseMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZQAmuseMenuView.swift; sourceTree = "<group>"; };
+		374F39B226DDDB9200726D5D /* ZQRoomShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZQRoomShowViewController.swift; sourceTree = "<group>"; };
+		374F39B726DDDBAA00726D5D /* ZQRoomNormalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZQRoomNormalViewController.swift; sourceTree = "<group>"; };
 		6D7A382CE0BEB9E5910E5983 /* Pods-DouYuZB-DouYuZBUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouYuZB-DouYuZBUITests.debug.xcconfig"; path = "Target Support Files/Pods-DouYuZB-DouYuZBUITests/Pods-DouYuZB-DouYuZBUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		81984484899F92C754B02181 /* Pods-DouYuZB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouYuZB.debug.xcconfig"; path = "Target Support Files/Pods-DouYuZB/Pods-DouYuZB.debug.xcconfig"; sourceTree = "<group>"; };
 		9EA72B966A61B10796F9DE0B /* Pods-DouYuZB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouYuZB.release.xcconfig"; path = "Target Support Files/Pods-DouYuZB/Pods-DouYuZB.release.xcconfig"; sourceTree = "<group>"; };
@@ -244,6 +262,7 @@
 				374F36FB26CCB54600726D5D /* ZQMainViewController.swift */,
 				374F370026CCB64F00726D5D /* ZQNavigationController.swift */,
 				374F36DF26CCB4DB00726D5D /* ZQBaseViewController.swift */,
+				374F39A826DCCBBB00726D5D /* ZQBaseAnchorViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -289,6 +308,8 @@
 		374F36B226CCAFD000726D5D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				374F39B226DDDB9200726D5D /* ZQRoomShowViewController.swift */,
+				374F39B726DDDBAA00726D5D /* ZQRoomNormalViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -458,6 +479,7 @@
 			isa = PBXGroup;
 			children = (
 				374F38FF26D3788900726D5D /* ZQCycleModel.swift */,
+				374F399426DC77C300726D5D /* ZQBaseGameModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -513,6 +535,7 @@
 		374F376526CCF7E900726D5D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				374F399E26DCACC300726D5D /* ZQFunnyViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -553,6 +576,7 @@
 		374F376A26CCF7E900726D5D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				374F398F26DC770400726D5D /* ZQGameViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -568,6 +592,7 @@
 		374F376C26CCF7E900726D5D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				374F399926DC782300726D5D /* ZQGameModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -593,6 +618,7 @@
 		374F376F26CCF7E900726D5D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				374F39A326DCAE1500726D5D /* ZQAmuseViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -615,6 +641,7 @@
 		374F377226CCF7E900726D5D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				374F39AD26DCD48500726D5D /* ZQAmuseMenuView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -945,21 +972,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				374F373926CCDC1B00726D5D /* UIBarButtonItem-Extension.swift in Sources */,
+				374F399526DC77C300726D5D /* ZQBaseGameModel.swift in Sources */,
+				374F39AE26DCD48500726D5D /* ZQAmuseMenuView.swift in Sources */,
 				374F378826CCF81500726D5D /* ZQAmuseViewController.swift in Sources */,
 				374F390826D387D300726D5D /* ZQRecommendGamesView.swift in Sources */,
 				374F370126CCB64F00726D5D /* ZQNavigationController.swift in Sources */,
 				374F38A426CF848100726D5D /* RecommendViewModel.swift in Sources */,
 				374F378D26CE029100726D5D /* ZQRecommendheaderView.swift in Sources */,
 				374F36FC26CCB54600726D5D /* ZQMainViewController.swift in Sources */,
+				374F39A426DCAE1500726D5D /* ZQAmuseViewModel.swift in Sources */,
 				374F373326CCBC8900726D5D /* R.generated.swift in Sources */,
+				374F39B326DDDB9300726D5D /* ZQRoomShowViewController.swift in Sources */,
 				374F38C826CF968B00726D5D /* BaseViewModel.swift in Sources */,
+				374F399F26DCACC400726D5D /* ZQFunnyViewModel.swift in Sources */,
 				374F38A926CF901A00726D5D /* AnchorGroup.swift in Sources */,
 				374F390026D3788900726D5D /* ZQCycleModel.swift in Sources */,
 				374F375326CCF53A00726D5D /* ZQPageContentView.swift in Sources */,
 				374F38CD26CF975D00726D5D /* NSDate-Extension.swift in Sources */,
 				374F377926CCF7E900726D5D /* ZQRecommendViewController.swift in Sources */,
+				374F399026DC770500726D5D /* ZQGameViewModel.swift in Sources */,
 				374F374326CCED9F00726D5D /* Common.swift in Sources */,
 				374F35FD26CB9C1600726D5D /* AppDelegate.swift in Sources */,
+				374F39B826DDDBAA00726D5D /* ZQRoomNormalViewController.swift in Sources */,
 				374F38C026CF965700726D5D /* NetworkTools.swift in Sources */,
 				374F36E026CCB4DB00726D5D /* ZQBaseViewController.swift in Sources */,
 				374F37A226CE2CB600726D5D /* ZQBeautifulCollectionCell.swift in Sources */,
@@ -970,9 +1004,11 @@
 				374F36F726CCB52A00726D5D /* ZQProfileViewController.swift in Sources */,
 				374F38EB26D3521500726D5D /* ZQRecommendCycleView.swift in Sources */,
 				374F374826CCEE8E00726D5D /* UIColor-Extension.swift in Sources */,
+				374F399A26DC782300726D5D /* ZQGameModel.swift in Sources */,
 				374F36E826CCB4F800726D5D /* ZQHomeViewController.swift in Sources */,
 				374F373E26CCEA6A00726D5D /* ZQPageTitleView.swift in Sources */,
 				374F36ED26CCB50400726D5D /* ZQLiveViewController.swift in Sources */,
+				374F39A926DCCBBC00726D5D /* ZQBaseAnchorViewController.swift in Sources */,
 				374F36F226CCB51800726D5D /* ZQFollowViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

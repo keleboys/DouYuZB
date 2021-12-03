@@ -19,12 +19,18 @@ extension BaseViewModel {
             guard let resultDict = result as? [String : Any] else { return }
             guard let dataArray = resultDict["data"] as? [[String : Any]] else { return }
             
-            
             // 2.判断是否分组数据
             if isGroupData {
                 // 2.1.遍历数组中的字典
                 for dict in dataArray {
-                    self.anchorGroups.append(AnchorGroup.deserialize(from: dict)!)
+                    let group = AnchorGroup.deserialize(from: dict)
+                    let room_list = dict["room_list"] as! [[String: AnyObject]]
+                    var array:[AnchorModel] = []
+                    for dict in room_list {
+                        array.append(AnchorModel.deserialize(from: dict)!)
+                    }
+                    group?.anchors = array
+                    self.anchorGroups.append(group!)
                 }
             } else {
                 // 2.1.创建组

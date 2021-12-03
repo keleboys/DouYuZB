@@ -32,6 +32,7 @@ disabled_rules:
  - identifier_name
  - colon
  - void_return
+ - force_cast
  
 large_tuple : #元组成员
   warning: 6

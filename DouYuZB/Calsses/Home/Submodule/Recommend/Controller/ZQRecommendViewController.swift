@@ -25,7 +25,7 @@ class ZQRecommendViewController: ZQBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+//        let path = Bundle.main.path(forResource: "123", ofType: nil)
     }
     
     override func initViews() {
@@ -36,6 +36,8 @@ class ZQRecommendViewController: ZQBaseViewController {
         collectionView.addSubview(gamesView)
         
         collectionView.contentInset = UIEdgeInsets(top: cycleViewHeight+gamesViewHeight, left: 0, bottom: 0, right: 0)
+        
+        super.initViews()
     }
     
     override func initDatas() {
@@ -83,7 +85,25 @@ extension ZQRecommendViewController: UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let group: AnchorGroup = self.viewModel.anchorGroups[indexPath.section]
+        let model = group.anchors[indexPath.row]
+        model.isVertical == 0 ? pushNormalRoomVc(model) : presentShowRoomVc()
+    }
+    
+    private func presentShowRoomVc() {
+        // 1.创建ShowRoomVc
+        let showRoomVc = ZQRoomShowViewController()
         
+        // 2.以Modal方式弹出
+        present(showRoomVc, animated: true, completion: nil)
+    }
+    
+    private func pushNormalRoomVc(_ model: AnchorModel) {
+        // 1.创建NormalRoomVc
+        let normalRoomVc = ZQRoomNormalViewController()
+        normalRoomVc.anchorModel = model
+        // 2.以Push方式弹出
+        navigationController?.pushViewController(normalRoomVc, animated: true)
     }
 }
 
@@ -147,10 +167,10 @@ extension ZQRecommendViewController {
             self.gamesView.cycleModels = groups
             
             // 3.数据请求完成
-//            self.loadDataFinished()
+            self.loadDataFinished()
         }
         
-        viewModel.requestCycleData{
+        viewModel.requestCycleData {
             print(self.viewModel.cycleModels)
             self.cycleView.cycleModels = self.viewModel.cycleModels
         }
