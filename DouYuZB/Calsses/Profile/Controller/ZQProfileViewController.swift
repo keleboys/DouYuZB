@@ -11,7 +11,7 @@ class ZQProfileViewController: ZQBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = ""
+        self.title = "李雷"
         // Do any additional setup after loading the view.
     }
 }
